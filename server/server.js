@@ -12,20 +12,12 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(bodyParser.json());
-
-if (process.env.NODE_ENV === 'production') {
-  // statically serve everything in the build folder on the route '/build'
-  app.use('/build', express.static(path.join(__dirname, '../build')));
-  // serve index.html on the route '/'
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'));
-  });
-}
+// statically serve everything in the build folder on the route '/build'
+console.log(__dirname);
+app.use(express.static(path.join(__dirname, '../build')));
 
 console.log(process.env.NODE_ENV);
 
-app.listen(3000); //listens on port 3000 -> http://localhost:3000/
-console.log('this works, at least !');
 // routes here
 app.post(
   '/buildroute',
@@ -45,3 +37,10 @@ app.post(
 app.get('/api/', (req, res) => {
   //do stuff
 });
+// serve index.html on the route '/'
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+
+app.listen(3000); //listens on port 3000 -> http://localhost:3000/
+console.log('this works, at least !');
