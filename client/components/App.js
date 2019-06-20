@@ -54,6 +54,7 @@ class App extends Component {
       yelpCategoryMatch: e.target.innerText,
     });
   }
+  
   onClick(e) {
     console.log(this.state.locInput0a + ' 📍 ' + this.state.locInput0b);
     console.log('Leaving in +' + this.state.radioVal + ' seconds');
