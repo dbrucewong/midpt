@@ -96,7 +96,6 @@ isochroneController.generateIsochrones = (req, res, next) => {
       // timeToTry = 1500;
       // timeToTry = timeToTry * 1.2;
 
-
       console.log(
         'trying isochrone intersection with a fairTime of ',
         timeToTry / 60
@@ -116,6 +115,7 @@ isochroneController.generateIsochrones = (req, res, next) => {
                 `&travelMode=driving` +
                 `&key=${process.env.BING_MAPS_API_KEY}`,
               (err, res, body) => {
+                console.log('isochrone controller', body);
                 if (err) res.status(404).send(err);
                 const arrayOfLatLngPoints = JSON.parse(body).resourceSets[0]
                   .resources[0].polygons[0].coordinates[0];
