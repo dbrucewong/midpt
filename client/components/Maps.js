@@ -10,7 +10,8 @@ const GoogleMapsAPI = new Promise((res, err) => {
   script.onerror = err;
   script.async = true;
   script.src =
-    'https://maps.googleapis.com/maps/api/js?key=' + config.GOOGLE_MAPS_API_KEY;
+    'https://maps.googleapis.com/maps/api/js?key=' +
+    'AIzaSyB8aYME45dFybrKuQfTwUYigAQS4nzbBFA';
 });
 
 const Maps = props => {
