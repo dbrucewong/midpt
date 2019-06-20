@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, '../build')));
 
 // routes here
 app.post(
-  '/buildroute',
+  '/api/buildroute',
   isochroneController.getCoords,
   isochroneController.generateRoutes,
   isochroneController.generateIsochrones,

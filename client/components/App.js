@@ -54,7 +54,7 @@ class App extends Component {
       yelpCategoryMatch: e.target.innerText,
     });
   }
-  
+
   onClick(e) {
     console.log(this.state.locInput0a + ' 📍 ' + this.state.locInput0b);
     console.log('Leaving in +' + this.state.radioVal + ' seconds');
@@ -66,7 +66,7 @@ class App extends Component {
       departureTime: departureTime,
     };
     this.setState({ loading: true });
-    fetch('/buildroute', {
+    fetch('/api/buildroute', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
