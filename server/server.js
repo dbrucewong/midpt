@@ -13,10 +13,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(bodyParser.json());
 // statically serve everything in the build folder on the route '/build'
-console.log(__dirname);
 app.use(express.static(path.join(__dirname, '../build')));
-
-console.log(process.env.NODE_ENV);
 
 // routes here
 app.post(
@@ -34,9 +31,6 @@ app.post(
   }
 );
 
-app.get('/api/', (req, res) => {
-  //do stuff
-});
 // serve index.html on the route '/'
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'));

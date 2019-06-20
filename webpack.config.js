@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     publicPath: '/build',
     proxy: {
-      '/bbbb': 'http://localhost:3000',
+      '/api': 'http://localhost:3000',
     },
     hot: true,
   },
