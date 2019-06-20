@@ -79,7 +79,7 @@ input[type="button"] {
 .formContainer {
   padding: 35px;
   margin: 0;
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     margin: 10px;
     border-radius: 5px;
   }
@@ -153,7 +153,7 @@ input[type="button"] {
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     flex-flow: row wrap;
   }
 }
@@ -163,14 +163,14 @@ input[type="button"] {
   border-radius: 5px;
   padding: 0 0 0 7px;
   width: calc(50% - 6px);
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 }
 
 .locInput:first-of-type {
   margin-right: 10px;
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     margin-right: 0;
     margin-bottom: 10px;
   }
@@ -191,7 +191,7 @@ input:focus {
 
 .locButtons {
   margin-top: 15px;
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     * { 
       display: block;
       margin: 0 auto; 
@@ -223,7 +223,7 @@ input[type=radio] {
 }
 
 .inputLabel {
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     margin-bottom: 10px;
   }
 }
@@ -265,7 +265,7 @@ input#yelpCategory {
   &::placeholder {
     text-align: left;
   }
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 }
@@ -276,7 +276,7 @@ label.yelpCategory {
 }
 span.yelpCategory {
   margin-left: 20px;
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 800px) {
     margin-left: 0;
     margin-top: 20px;
   }
