@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const myEnv = require('dotenv').config();
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {

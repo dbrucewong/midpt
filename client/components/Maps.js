@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import config from '../config';
 import Map from '../components/Map';
 import VennMap from '../components/VennMap';
 
