@@ -65,7 +65,7 @@ class App extends Component {
       departureTime: departureTime,
     };
     this.setState({ loading: true });
-    fetch('http://localhost:3000/buildroute', {
+    fetch('/buildroute', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
